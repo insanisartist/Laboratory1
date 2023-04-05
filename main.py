@@ -9,14 +9,12 @@ def parse():
     page = requests.get(url) # отправляем запрос методом Get на данный адрес и получаем ответ в переменную
     soup = BeautifulSoup(page.text, "html.parser") # передаем страницу в bs4
     soup.get_text(strip=True)
-    #print(soup)
     mydivs = soup.find_all("span", {"class": "media-body media-vertical-align"})
     for data in mydivs:
         k+=1
         text = data.text.strip()
         d[k]=text
         print(d[k])
-        #print("След")
 
 if __name__ == '__main__':
     parse()
