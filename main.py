@@ -17,7 +17,6 @@ def parse():
         d[k]=text
         print(d[k])
         #print("След")
-    print("fixed")
 
 if __name__ == '__main__':
     parse()
